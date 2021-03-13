@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/dabf4ff9a0.js" crossorigin="anonymous"></script>
+    <title>N2A Developers</title>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger p-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">N2A Developers</a>
+          <div>
+            <button class="btn btn-light" id="googleButton"><i class="fa fa-google text-danger" aria-hidden="true"></i></button>
+            <button class="btn btn-light text-danger d-none" id="signOutButton">Sign Out</button>
+            <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="nav-link">Rate a Freelancer</a>
+              </li>
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+          </div>
+        </div>
+      </nav>
+
+      <!-- Container - 1 -->
+      <div class="container-fluid bg-danger p-3 d-flex flex-row align-items-stretch justify-content-center">
+          <div class="left-container col-5 text-light py-5 d-flex flex-column align-items-center justify-content-center">
+              <p class="display-6">Hire Freelancer with better reviews.</p>
+          </div>
+          <div class="right-container col-7">
+              <img src="./images/choose.svg" alt="choose">
+          </div>
+      </div>
+
+      <!-- Container - 2 -->
+      <div class="container-fluid p-3 d-flex flex-row align-items-stretch justify-content-center">
+          <div class="left-container container-fluid col-7">
+            <img src="./images/features.jpg" alt="features"  width="100%">
+          </div>
+
+          <div class="col-5 right-container container-fluid text-danger py-5 d-flex align-items-center justify-content-center">
+            <p class="display-6"><strong>Features</strong></p>
+          </div>
+      </div>
+
+      <!-- Container - 3 -->
+      <div class="container-fluid bg-danger  d-flex flex-row align-items-stretch justofy-content-center">
+          <div class="col-5 left-container text-light d-flex align-items-center justify-content-center">
+            <p class="display-6">Reviews & Feedback</p>
+          </div>
+
+          <div class="right-container p-5 col-7">
+            <!-- Carousel -->
+            <div id="carouselExampleIndicators" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./images/feedback.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/features.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/feedback.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+          </div>
+      </div>
+
+      <!-- Container - 4 -->
+      <div class="container-fluid py-5 d-flex align-items-stretch justify-content-center">
+          <div class="left-container col-8 container-fluid d-flex flex-column align-items.start justify-content-center">
+            <div class="progress">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+              </div>
+          </div>
+
+          <div class="right-container col-4  d-flex flex-column align-items-start justify-content-center container-fluid text-danger">
+              <p class="display-6"><strong>Visitors Per Month</strong></p>
+              <p>Some Satisfied Customers</p>
+          </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="container-fluid bg-danger py-5"></div>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>  
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js" ></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js" ></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
