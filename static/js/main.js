@@ -13,7 +13,10 @@ firebase.initializeApp(firebaseConfig);
 
 var provider = new firebase.auth.GoogleAuthProvider();
 const googleButton = document.getElementById("googleButton");
+const googleButtonFixed = document.getElementById("googleButtonFixed");
 const signOutButton = document.getElementById("signOutButton");
+const signOutButtonFixed = document.getElementById("signOutButtonFixed");
+
 const googleSignIn = () => {
   firebase
     .auth()
@@ -30,6 +33,8 @@ const googleSignIn = () => {
       console.log(`user = ${user}`);
       googleButton.classList.add("d-none");
       signOutButton.classList.remove("d-none");
+      googleButtonFixed.classList.add("d-none");
+      signOutButtonFixed.classList.remove("d-none");
       firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE);
     //   const csrfToken = getCookie("CSRF-TOKEN");
 
@@ -71,6 +76,8 @@ const googleSignOut = () => {
       console.log("Signed Out Successfully");
       googleButton.classList.remove("d-none");
       signOutButton.classList.add("d-none");
+      googleButtonFixed.classList.remove("d-none");
+      signOutButtonFixed.classList.add("d-none");
     })
     .catch((error) => {
       console.log(`error while signing out = ${error}`);
@@ -84,35 +91,43 @@ googleButton.addEventListener("click", () => {
 signOutButton.addEventListener("click", () => {
   googleSignOut();
 });
+googleButtonFixed.addEventListener("click", () => {
+  googleSignIn();
+});
 
-// var provider = new firebase.auth.GoogleAuthProvider();
-//     provider.addScope('profile');
-//     provider.addScope('email');
-//     firebase.auth().signInWithPopup(provider).then(function(result) {
-//      // This gives you a Google Access Token.
-//      var token = result.credential.accessToken;
-//      // The signed-in user info.
-//      var user = result.user;
-//     //  console.log(token)
+signOutButtonFixed.addEventListener("click", () => {
+  googleSignOut();
+});
 
-//     //  Fetch Request
-//     fetch("/sessionLogin", {
-//         method: "POST",
-//         headers: {
-//             Accept: 'application/json',
-//             "Content-Type": "application/json",
-//             "CSRF-Token": token,
-//         },
-//         body: JSON.stringify({token}),
-//     })
-//     .then(() => {
-//         console.log("in first promise")
-//     })
-//     .then(() => {
-//         console.log('in second promise')
-//     });
-//     return false;
-//     })
-//     .catch((error) => {
-//         console.log(error);
-//     })
+const navbarFixed = document.getElementById("fixed-nav");
+const navbarToggler = document.getElementById("navbar-toggler");
+const navbarTogglerFixed = document.getElementById("navbar-toggler-fixed");
+const navbarSupportedContent = document.getElementById("navbarSupportedContent");
+const navbarSupportedContentFixed = document.getElementById("navbarSupportedContentFixed");
+
+
+var scrollObject = {};
+window.onscroll = getScrollPosition;
+
+function getScrollPosition(){
+    scrollObject = {
+       x: window.pageXOffset,
+       y: window.pageYOffset
+    }
+    // If you want to check distance
+    if(scrollObject.y > 200) {
+        // add class
+        navbarFixed.style.top = "0";
+        if(navbarSupportedContent.classList.contains("show")) {
+          navbarToggler.classList.add("collapsed");
+          navbarSupportedContent.classList.remove("show");
+        }
+    } else {
+        // remove class
+        if(navbarSupportedContentFixed.classList.contains("show")) {
+          navbarTogglerFixed.classList.add("collapsed");
+          navbarSupportedContentFixed.classList.remove("show");
+        }
+        navbarFixed.style.top = "-6rem";
+    }
+}

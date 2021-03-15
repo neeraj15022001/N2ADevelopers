@@ -15,49 +15,77 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/dabf4ff9a0.js" crossorigin="anonymous"></script>
     <title>N2A Developers</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/N2ABlack.png" />
   </head>
   <body>
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger p-3">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">N2A Developers</a>
+          <a class="navbar-brand" href="#"><img src="./images/N2A.png" alt="logo" style="height: 3rem"></a>
           <div>
-            <button class="btn btn-light" id="googleButton"><i class="fa fa-google text-danger" aria-hidden="true"></i></button>
-            <button class="btn btn-light text-danger d-none" id="signOutButton">Sign Out</button>
-            <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button id="navbar-toggler" class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
           </div>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Features</a>
+              <li class="nav-item" aria-current="page">
+                <a href="#" class="nav-link active">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="#features">Features</a>
               </li>
               <li class="nav-item">
-                  <a href="#" class="nav-link">Rate a Freelancer</a>
-              </li>
-              <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                <a class="nav-link" href="#pricing">Pricing</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                <a href="#faq" class="nav-link">FAQ</a>
               </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form> -->
+              <li class="nav-item">
+                <a href="#visitor" class="nav-link">Visitors</a>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-light" id="googleButton"><i class="fa fa-google text-danger" aria-hidden="true"></i></button>
+              </li>
+              <li class="nav-item" id="signOutButtonItem">
+                <button class="btn btn-light text-danger d-none" id="signOutButton">Sign Out</button>
+              </li>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Fixed Nav -->
+      <nav class="navbar navbar-expand-lg navbar-light p-3 fixed-nav" id="fixed-nav">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="./images/N2ABlack.png" alt="logo" style="height: 3rem;"></a>
+          <div>
+            <button id="navbar-toggler-fixed" class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContentFixed" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContentFixed">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <li class="nav-item" aria-current="page">
+                  <a href="#" class="nav-link active" >Home</a>
+                </li>
+                <a class="nav-link" href="#features">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pricing">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a href="#faq" class="nav-link">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a href="#visitor" class="nav-link">Visitors</a>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-danger" id="googleButtonFixed"><i class="fa fa-google text-light" aria-hidden="true"></i></button>
+              </li>
+              <li class="nav-item" id="signOutButtonItemFixed">
+                <button class="btn btn-danger text-light d-none" id="signOutButtonFixed">Sign Out</button>
+              </li>
           </div>
         </div>
       </nav>
@@ -73,7 +101,7 @@
       </div>
 
       <!-- Container - 2 -->
-      <div class="container-fluid p-3 d-flex flex-row align-items-stretch justify-content-center">
+      <div class="container-fluid p-3 d-flex flex-row align-items-stretch justify-content-center" id="features">
           <div class="left-container container-fluid col-7">
             <img src="./images/features.jpg" alt="features"  width="100%">
           </div>
@@ -120,23 +148,126 @@
           </div>
       </div>
 
-      <!-- Container - 4 -->
-      <div class="container-fluid py-5 d-flex align-items-stretch justify-content-center">
+      <!-- Conatiner - 4 -->
+      <div class="container-fluid py-5 d-flex align-items stretch justify-content-center" id="pricing">
+        <div class="left-container col-8 container-fluid d-flex flex-column align-items.start justify-content-center">
+          <div class="pricing d-flex flex-row align-items-center justify-content-between">
+            <!-- Card 1 -->
+            <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Danger card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Danger card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Danger card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+
+
+            </div>
+        </div>
+
+        <div class="right-container col-4 d-flex flex-column align-items-center justify-content-center container-fluid text-danger">
+            <p class="display-6"><strong>Pricing</strong></p>
+        </div>
+      </div>
+
+      <!-- Container 6 -->
+      <div class="container-fluid py-5 d-flex align-items-center justify-content-center bg-danger" id="faq">
+        <div class=" text-center left-container col-4 d-flex flex-column align-items center justify-content-center container-fluid text-light">
+          <p class="display-6"><strong>FAQ</strong></p>
+        </div>
+
+        <div class="right-container col-8 container-fluid d-flex flex-column align-items-center justify-content-center">
+
+          <div class="accordion  accordion-flush container-fluid" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed text-danger bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Question 1
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse bg-light text-danger" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed text-danger bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Question 2
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse bg-light text-danger" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed text-danger bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Question 3
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse bg-light text-danger" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Container - 7-->
+      <div class="container-fluid py-5 d-flex align-items-stretch justify-content-center bg-light" id="visitor">
           <div class="left-container col-8 container-fluid d-flex flex-column align-items.start justify-content-center">
             <div class="progress">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                <div class="progress-bar bg-danger text-light" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
               </div>
           </div>
 
-          <div class="right-container col-4  d-flex flex-column align-items-start justify-content-center container-fluid text-danger">
+          <div class="right-container col-4 d-flex flex-column align-items-start justify-content-center container-fluid text-danger">
               <p class="display-6"><strong>Visitors Per Month</strong></p>
               <p>Some Satisfied Customers</p>
           </div>
       </div>
 
       <!-- Footer -->
-      <div class="container-fluid bg-danger py-5"></div>
+      <div class="container-fluid bg-danger py-5 text-center text-light" id="footer">
 
+      </div>
+
+      <div class="copyright" align="center">
+        <script>
+          const footer = document.getElementById("footer");
+          const year = new Date().getFullYear()
+          footer.innerHTML = `
+          &copy; ${year} - ${year + 1}<br/>
+          N2A Developers - All Rights Reserved.
+          `;
+        </script>
+      </div>
+      
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
