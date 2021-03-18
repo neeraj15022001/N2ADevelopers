@@ -1,4 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+::-webkit-scrollbar  {
+    background-color: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #FF7276;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #C94E55;
+}
 * {
     margin: 0;
     padding: 0;
@@ -20,3 +31,32 @@ button {
     z-index: 10000;
     background-color: white;
 }
+.bg-custom-red {
+    background-color:#FF7276 !important;
+}
+.text-custom-red {
+    color: #FF7276 !important;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+.fw-400 {
+    font-weight: 400;
+}
+.fw-500 {
+    font-weight: 500;
+}
+.fw-600 {
+    font-weight: 600;
+}
+.fw-700 {
+    font-weight: 700;
+}
+.fw-800 {
+    font-weight: 800;
+}
+.fw-900 {
+    font-weight: 900;
+}
+
