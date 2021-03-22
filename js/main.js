@@ -3,7 +3,87 @@ const googleButton = document.getElementById("googleButton");
 const googleButtonFixed = document.getElementById("googleButtonFixed");
 const signOutButton = document.getElementById("signOutButton");
 const signOutButtonFixed = document.getElementById("signOutButtonFixed");
+const navContainer = document.getElementById("nav-container");
 
+const template = `
+<nav class="navbar navbar-expand-lg navbar-dark bg-custom-red p-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="./images/N2A.png" alt="logo" style="height: 3rem"></a>
+          <div>
+            <button id="navbar-toggler" class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item" aria-current="page">
+                <a href="#" class="nav-link active">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#features">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pricing">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a href="#faq" class="nav-link">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a href="#visitor" class="nav-link">Visitors</a>
+              </li>
+              <li class="nav-item">
+                <a href="./projects.html" class="nav-link">Projects</a>
+              </li>
+              <!-- <li class="nav-item">
+                <button class="btn btn-light" id="googleButton"><i class="fa fa-google text-custom-red" aria-hidden="true"></i></button>
+              </li>
+              <li class="nav-item" id="signOutButtonItem">
+                <button class="btn btn-light text-custom-red d-none" id="signOutButton">Sign Out</button>
+              </li> -->
+          </div>
+        </div>
+      </nav>
+
+      <!-- Fixed Nav -->
+      <nav class="navbar navbar-expand-lg navbar-light p-3 fixed-nav" id="fixed-nav">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="./images/N2ABlack.png" alt="logo" style="height: 3rem;"></a>
+          <div>
+            <button id="navbar-toggler-fixed" class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContentFixed" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContentFixed">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <li class="nav-item" aria-current="page">
+                  <a href="#" class="nav-link active" >Home</a>
+                </li>
+                <a class="nav-link" href="#features">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pricing">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a href="#faq" class="nav-link">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a href="#visitor" class="nav-link">Visitors</a>
+              </li>
+              <li class="nav-item">
+                <a href="./projects.html" class="nav-link">Projects</a>
+              </li>
+              <!-- <li class="nav-item">
+                <button class="btn btn-danger" id="googleButtonFixed"><i class="fa fa-google text-light" aria-hidden="true"></i></button>
+              </li>
+              <li class="nav-item" id="signOutButtonItemFixed">
+                <button class="btn btn-danger text-light d-none" id="signOutButtonFixed">Sign Out</button>
+              </li> -->
+          </div>
+        </div>
+      </nav>
+`;
+navContainer.innerHTML = template;
 // let value_or_null = Cookies.get();
 // console.log(`Cookie value is ${Object.values(value_or_null)}`)
 
